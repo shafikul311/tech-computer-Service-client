@@ -1,34 +1,23 @@
-import React from 'react';
-import laptop from '../../images/store.jpg'
+import React, { useEffect, useState } from 'react';
 import ServiceList from '../ServiceList/ServiceList';
 
-const serviceData = [
-    {
-      title: "Laptop Repair",
-      img: laptop,
-      price: "$200",
-      about:
-        "ipsum dolor sit amet consectetur adipisicing elit. Ex, quod. Laborum quisquam quae culpa nihil suscipit distinctio voluptatibus, vel esse?ipsum dolor sit amet consectetur adipisicing elit. Ex, quod. Laborum quisquam quae culpa nihil suscipit distinctio voluptatibus, vel esse?",
-    },
-  
-    {
-      title: "Laptop Repair",
-      img: laptop,
-      price: "$200",
-      about:
-        "ipsum dolor sit amet consectetur adipisicing elit. Ex, quod. Laborum quisquam quae culpa nihil suscipit distinctio voluptatibus, vel esse?ipsum dolor sit amet consectetur adipisicing elit. Ex, quod. Laborum quisquam quae culpa nihil suscipit distinctio voluptatibus, vel esse?",
-    },
-    
-    {
-      title: "Laptop Repair",
-      img: laptop,
-      price: "$200",
-      about:
-        "ipsum dolor sit amet consectetur adipisicing elit. Ex, quod. Laborum quisquam quae culpa nihil suscipit distinctio voluptatibus, vel esse?ipsum dolor sit amet consectetur adipisicing elit. Ex, quod. Laborum quisquam quae culpa nihil suscipit distinctio voluptatibus, vel esse?",
-    }
-  ];
 
 const OurService = () => {
+  const [serviceData ,setServiceData] = useState([])
+
+
+
+  useEffect(() => {
+    const url = `http://localhost:5080/addService`
+    fetch(url)
+    .then(res=>res.json())
+    .then(data=>setServiceData(data))
+  
+  },[])
+
+  console.log(serviceData)
+
+
     return (
         <section className="text-center">
             <h1>Our Services</h1>
