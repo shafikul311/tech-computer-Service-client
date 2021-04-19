@@ -15,7 +15,7 @@ const [review ,setReview] = useState([])
     .then(data=>setReview(data))
   
   },[])
-  console.log(review)
+  // console.log(review)
 
 
 

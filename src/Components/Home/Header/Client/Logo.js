@@ -5,7 +5,7 @@ const Logo = ({client}) => {
     return (
         <div className="col-md-2 text-center">
           
-            <img style={{width:'150px'}} src={client.cImg} alt=""/>
+            {/* <img style={{width:'150px'}} src={client.cImg} alt=""/> */}
         </div>
     );
 };

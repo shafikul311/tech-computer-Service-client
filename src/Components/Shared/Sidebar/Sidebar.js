@@ -44,6 +44,11 @@ const Sidebar = () => {
                         <p>Add A Review</p>
                     </Link>
                 </li>
+                <li>
+                <Link to="/bookNow/:_id">
+                        <p>Book Now</p>
+                    </Link>
+                </li>
                
             </ul>
         </div>

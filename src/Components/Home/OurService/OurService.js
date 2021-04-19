@@ -15,13 +15,13 @@ const OurService = () => {
   
   },[])
 
-  console.log(serviceData)
+  // console.log(serviceData)
 
 
     return (
         <section className="text-center">
             <h1>Our Services</h1>
-           <div className="row p-5">
+           <div className="row p-5 d-flex justify-content-center m-3">
            {
                 serviceData.map((service ,title) => <ServiceList key={title} service={service}></ServiceList>)
             }

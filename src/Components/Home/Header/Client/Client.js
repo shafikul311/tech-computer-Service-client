@@ -8,35 +8,37 @@ import cl6 from "../../../imageclient/Screenshot_17.png";
 import Logo from "./Logo";
 
 
-const clientLogos = [
-  {
-    cImg: cla,
-  },
-  {
-    cImg: cl2,
-  },
-  {
-    cImg: cl3,
-  },
-  {
-    cImg: cl4,
-  },
-  {
-    cImg: cl5,
-  },
-  {
-    cImg: cl6,
-  },
-];
 
 const Client = () => {
+
+  const clientLogos = [
+    {
+      cImg: cla,
+    },
+    {
+      cImg: cl2,
+    },
+    {
+      cImg: cl3,
+    },
+    {
+      cImg: cl4,
+    },
+    {
+      cImg: cl5,
+    },
+    {
+      cImg: cl6,
+    },
+  ];
+  
   return (
     <div className="text-center">
       <h2>Our Client From</h2>
       <div className="row p-5">
         {
 
-        clientLogos.map(client =><Logo client={client}></Logo> )
+        clientLogos.map((client, id) =><Logo key={client.id} client={client}></Logo> )
 
         }
       </div>

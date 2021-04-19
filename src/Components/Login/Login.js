@@ -1,14 +1,24 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import google from "../images/google.png";
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from "../../firebase.config";
 import NavBar from "../Shared/NavBar/NavBar";
+import { UserContext } from "../../App";
 
 
 
 const Login = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+
+
+
+  let history = useHistory();
+  let location = useLocation();
+
+  let { from } = location.state || { from: { pathname: "/" } };
+
 
     if (firebase.apps.length === 0) {
         firebase.initializeApp(firebaseConfig);
@@ -23,9 +33,11 @@ const Login = () => {
    
     var user = result.user;
     // console.log(user)
-    const { displayName ,email} = user;
-    console.log(displayName ,email)
+    const { displayName, email } = result.user;
+    const signInUser = { name: displayName, email };
 
+    setLoggedInUser(signInUser);
+    history.replace(from);
 
   }).catch((error) => {
     var errorCode = error.code;
@@ -36,10 +48,6 @@ const Login = () => {
   });
 
     }
-
-
-
-
   return (
    <div>
        <NavBar></NavBar>
