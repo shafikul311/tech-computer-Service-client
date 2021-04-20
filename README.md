@@ -2,7 +2,7 @@
 
 #full-stake-website -client
 # React-web-app
-#using technology React , react router , bootstrap ,react-bootsrtap ,firebase - goofle-auth ,spring -Animation many more.
+#using technology React , react router , bootstrap  ,react-bootsrtap , firebase - gooGle-auth ,  spring -Animation many more.
 #two type user can login 
 1.Admin
 2.user limited access
