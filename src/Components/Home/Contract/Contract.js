@@ -2,7 +2,7 @@ import React from "react";
 
 const Contract = () => {
   return (
-    <div className=" text-center p-5">
+    <div style={{backgroundColor:'#57606f',color:'white'}} className=" text-center p-5 text-head-brand ">
       <h1 className="pb-5">We handle Your Problem Personally</h1>
 
             <div className="d-flex justify-content-center">
@@ -36,7 +36,7 @@ const Contract = () => {
                     ></textarea>
                 </div>
                 
-                <button className="justify-content-end" type="submit"> Submit</button>
+                <button className="btn-brand justify-content-end " type="submit"> Submit</button>
                 </form>
             </div>
      </div>

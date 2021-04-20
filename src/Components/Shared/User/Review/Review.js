@@ -19,8 +19,8 @@ const Review = () => {
      image: imageURL
     }
 
-    console.log(addReview)
-    console.log(imageURL)
+    // console.log(addReview)
+    // console.log(imageURL)
 
 
     const url = `http://localhost:5080/addReview`;
@@ -59,8 +59,8 @@ const Review = () => {
     return (
         <div className="row">
             <Sidebar></Sidebar>
-            <div className="col-md-10">
-                <h1 className="p-5">Add A review Here</h1>
+            <div className="col-md-10 background-brand">
+                <h1 className="p-5 text-brand">Add A review Here</h1>
             
                  <form className="w-75" onSubmit={handleSubmit(onSubmit)}>
                     <input type="text" className="form-control" placeholder="Name" {...register("Name")} required />
@@ -75,7 +75,7 @@ const Review = () => {
                     <input onChange={handelImageSubmit} className="form-control" type="file" name="file" placeholder="file" required/>
                     <br/>
 
-                    <input type="submit" />
+                    <input className="btn-brand" type="submit" />
                 </form>
               
             </div>

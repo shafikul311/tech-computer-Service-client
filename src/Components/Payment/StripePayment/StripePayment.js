@@ -45,7 +45,7 @@ const StripePayment = ({handlePayment}) => {
       <form onSubmit={handleSubmit} className="form-control">
             <CardElement />
             <br/>
-            <button type="submit" disabled={!stripe}>
+            <button className="btn-brand" type="submit" disabled={!stripe}>
                 Pay
             </button>
         </form>

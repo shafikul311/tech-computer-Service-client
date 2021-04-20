@@ -1,9 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import { useSpring, animated } from '@react-spring/web'
+
 const ServiceList = (props) => {
 
-    const {price ,title,description ,image, _id} = props.service
+    const {price ,name,description ,image, _id} = props.service
+
+
+    const styles = useSpring({
+        loop: true,
+        to: [
+          { opacity: 1, color: '#ffaaee' },
+          { opacity: 0, color: 'rgb(14,26,19)' },
+        ],
+        from: { opacity: 0, color: 'red' },
+      })
+      // ...
 
 
 
@@ -11,13 +24,15 @@ const ServiceList = (props) => {
     return (
 
         
-       <div className="col-md-4 text-center shadow p-3 mb-5 bg-body rounded">
-           {/* <h1>{service.id}</h1> */}
-           <Link style={{color:'gray'}} to={`bookNow/${_id}`}>
+       <div className="col-md-3 text-center box-shadow m-5">
+           <Link className="text-brand" to={`bookNow/${_id}`}>
            <div className="p-3">
-           <img style={{width:'90%'}} src={image} alt=""/>
-           <h5> ${price}</h5>
-           <h2>{title}</h2>
+
+           <animated.div style={styles}>
+           <img className="rounded" style={{height:'100px'}} src={image} alt=""/>
+           </animated.div>
+           <h5 className="pt-2"> ${price}</h5>
+           <h2>{name}</h2>
            <p>{description}</p>
            
            </div>

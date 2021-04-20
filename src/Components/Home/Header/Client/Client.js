@@ -33,8 +33,8 @@ const Client = () => {
   ];
   
   return (
-    <div className="text-center">
-      <h2>Our Client From</h2>
+    <div className="text-center background-brand">
+      <h2 className="pt-5">Our Client From</h2>
       <div className="row p-5">
         {
 

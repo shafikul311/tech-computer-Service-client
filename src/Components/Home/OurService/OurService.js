@@ -20,8 +20,8 @@ const OurService = () => {
 
     return (
         <section className="text-center">
-            <h1>Our Services</h1>
-           <div className="row p-5 d-flex justify-content-center m-3">
+            <h1 className="pt-3 text-brand">Our Services</h1>
+           <div className="row p-3 d-flex justify-content-center m-3">
            {
                 serviceData.map((service ,title) => <ServiceList key={title} service={service}></ServiceList>)
             }

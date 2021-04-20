@@ -16,7 +16,7 @@ const Home = () => {
             <Testimonial></Testimonial>
             <Client></Client>
             <Contract></Contract>
-            {/* <Footer></Footer> */}
+            <Footer></Footer>
         </div>
     );
 };

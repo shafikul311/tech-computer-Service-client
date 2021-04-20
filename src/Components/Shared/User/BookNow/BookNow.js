@@ -31,8 +31,8 @@ useEffect(() => {
 const handlePaymentSuccess = (paymentId)=>{
     const paymentData ={
 
-        Name:loggedInUser.name,
-        Email:loggedInUser.email,
+        name:loggedInUser.name,
+        email:loggedInUser.email,
         
         productData:bookingData[0],
         paymentId, 
@@ -40,16 +40,23 @@ const handlePaymentSuccess = (paymentId)=>{
 
     }
    console.log(paymentData)
+
+   const url = `http://localhost:5080/addBooking`;
+   fetch(url, {
+     method: "POST",
+     headers: {
+       "Content-type": "application/json",
+     },
+     body: JSON.stringify(paymentData),
+   }).then((res) => res.json());
 }
 
-console.log(bookingData[0])
-
-
+// console.log(bookingData[0])
     return (
         <div className="row">
             <Sidebar></Sidebar>
-            <div className="col-md-10">
-                <h1>Book Now</h1>
+            <div className="col-md-10 background-brand">
+                <h1 className="text-brand">Book Now</h1>
                 <hr/>
 
        <div className="row">
@@ -72,7 +79,6 @@ console.log(bookingData[0])
                     <input className="form-control w-75" defaultValue={bookingData[0].price}   placeholder="Service Charge" {...register("serviceCharge", { required: true })} />
                     {errors.serviceCharge && <span className="text-danger">This field is required</span>}
                     <br/>
-
                     {/* <input type="submit" /> */}
                     </form>
            </div>

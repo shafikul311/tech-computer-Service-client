@@ -22,7 +22,7 @@ const [review ,setReview] = useState([])
 
     return (
 
-<section className="text-center p-5">
+<section className="text-center p-5 text-brand">
 <h1>Testimonial</h1>
 <div className="row p-5">
 {

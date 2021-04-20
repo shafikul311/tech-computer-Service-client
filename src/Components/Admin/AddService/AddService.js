@@ -52,7 +52,7 @@ const AddService = () => {
 
   
     return (
-        <div className="row">
+        <div className="row background-brand">
             <Sidebar></Sidebar>
             <div className="col-md-10 pt-5">
                 <h1>Add Service</h1>
@@ -74,7 +74,7 @@ const AddService = () => {
             <input onChange={handelImageSubmit} className="form-control" type="file" name="file" placeholder="file" required/>
             <br/>
             
-            <input type="submit" />
+            <input className="btn-brand" type="submit" />
             </form>
 
 

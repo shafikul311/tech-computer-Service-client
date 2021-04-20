@@ -1,0 +1,22 @@
+
+.footer{
+
+    list-style: none;
+    color:white;
+    text-align:center;
+  }
+
+  .background-footer{
+    background-color: black;
+
+
+}
+
+.footer-ul{
+    list-style: none;
+}
+
+.icon{
+    margin:5px;
+    padding:5px;
+}
