@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import ServiceList from '../ServiceList/ServiceList';
 
 
+
 const OurService = () => {
   const [serviceData ,setServiceData] = useState([])
 
 
 
   useEffect(() => {
-    const url = `http://localhost:5080/addService`
+    const url = `http://localhost:5080/getService`
     fetch(url)
     .then(res=>res.json())
     .then(data=>setServiceData(data))
@@ -16,7 +17,6 @@ const OurService = () => {
   },[])
 
   // console.log(serviceData)
-
 
     return (
         <section className="text-center">

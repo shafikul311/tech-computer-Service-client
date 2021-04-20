@@ -12,7 +12,7 @@ const TotalBookedAndUpdate = (props) => {
              <h5>{name}</h5>  
              <p><small>{description}</small></p>
 
-             <h5 className="text-danger">Pending</h5>      
+             <h5 className="text-danger">pending</h5>      
          
         </div>
     );

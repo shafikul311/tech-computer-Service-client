@@ -7,9 +7,9 @@ import { faFacebookF, faInstagram, faGooglePlusG } from '@fortawesome/free-brand
 
 const Footer = () => {
     return (
-       <div className="row background-footer p-5">
+       <footer className="row background-footer p-5">
            <div className="col-md-4">
-               <h6 className="footer" >Tech computer service</h6>
+               <h3 className="footer" >Tech computer service</h3>
                  <ul className="footer-ul">
                                 
                 <li>
@@ -36,7 +36,7 @@ const Footer = () => {
                </ul>
            </div>
            <div className="col-md-4">
-                            
+               <ul className="footer-ul">           
                 <li>
                 <Link  className="footer" to="/makeAdmin">
                         <p>Make Admin</p>
@@ -59,31 +59,35 @@ const Footer = () => {
                     <p>Book Now</p>
                 </Link>
                 </li>
+
+                </ul>  
            </div>
            <div className="col-md-4">
-               <h4 className="footer" >Social Link</h4>
-               {/* <div className="col-md-3">
-               <FontAwesomeIcon className="icon" icon={faFacebookF} />
 
-               </div>
-               <div className="col-md-3">
-               <FontAwesomeIcon className="icon" icon={faGooglePlusG} />
+           <h4 className="footer" >Social Link</h4>
 
-               </div>
-               <div className="col-md-3">
-               <FontAwesomeIcon className="icon" icon={faInstagram} />
-
-               </div> */}
+               <ul className="footer-ul">
+                   <a href=""><li> <FontAwesomeIcon className="iconStyle" icon={faFacebookF} /> </li> </a>
+                   <a href=""> <li> <FontAwesomeIcon className="iconStyle" icon={faGooglePlusG} /></li> </a>
+                   <a href="">  <li> <FontAwesomeIcon className="iconStyle" icon={faInstagram} /></li></a>
+                   
+                  
+                  
+               </ul>
+            
+              
            </div>
 
                
                     <p className="footer">Copyright {(new Date()).getFullYear()} All Rights Reserved</p>
              
-       </div>
+       </footer>
     );
 };
 
 export default Footer;
+
+
 
 
 

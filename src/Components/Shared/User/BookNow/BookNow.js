@@ -8,6 +8,7 @@ import Sidebar from '../../Sidebar/Sidebar';
 
 const BookNow = () => {
 
+
     const [loggedInUser ,setLoggedInUser] = useContext(UserContext);
 
     const [bookingData , setBookingData] = useState([0])
@@ -36,7 +37,8 @@ const handlePaymentSuccess = (paymentId)=>{
         
         productData:bookingData[0],
         paymentId, 
-        date: new Date().toDateString()
+        date: new Date().toDateString(),
+
 
     }
    console.log(paymentData)

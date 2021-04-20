@@ -6,7 +6,7 @@ const OrderList = () => {
     const [orderList , setOrderList] = useState([])
 
     useEffect(() => {
-        const url = `http://localhost:5080/addBooking`
+        const url = `http://localhost:5080/getBooking`
         fetch(url)
         .then(res =>res.json())
         .then(data => setOrderList(data))

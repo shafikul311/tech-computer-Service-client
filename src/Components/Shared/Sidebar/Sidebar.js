@@ -9,7 +9,7 @@ const Sidebar = () => {
         const [isAdmin , setIsAdmin] = useState(false)
 
         useEffect(()=>{
-            const url = `http://localhost:5080/addAdmin`
+            const url = `http://localhost:5080/isAdmin`
             fetch(url, {
                 method: 'POST',
                 headers: { 'content-type': 'application/json' },
@@ -20,7 +20,7 @@ const Sidebar = () => {
             .then(data=> setIsAdmin(data))
         }, [])
 
-        // console.log(isAdmin)
+        console.log(isAdmin)
 
 
     return (
@@ -34,7 +34,7 @@ const Sidebar = () => {
                     </Link>
                 </li>
 
-             {/* { isAdmin &&  <div> */}
+             { isAdmin  ?  <div>
                 <li>
                     <Link className="side-bar"  to="/orderList">
                         <p>Order List</p>
@@ -56,10 +56,9 @@ const Sidebar = () => {
                     </Link>
                 </li>
 
-                {/* </div>} */}
-
-                <hr/>
-                <li>
+                </div> :  
+                <div>
+                    <li>
                 <Link className="side-bar"  to="/bookedServiceList">
                         <p>Booked Service List</p>
                     </Link>
@@ -74,6 +73,10 @@ const Sidebar = () => {
                         <p>Book Now</p>
                     </Link>
                 </li>
+                </div>  }
+
+                <hr/>
+                
                
             </ul>
         </div>

@@ -9,7 +9,7 @@ const [review ,setReview] = useState([])
 
 
   useEffect(() => {
-    const url = `http://localhost:5080/addReview`
+    const url = `http://localhost:5080/getReview`
     fetch(url)
     .then(res=>res.json())
     .then(data=>setReview(data))

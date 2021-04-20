@@ -7,16 +7,18 @@
   }
 
   .background-footer{
-    background-color: black;
+    background-color: grey;
 
 
 }
 
 .footer-ul{
     list-style: none;
+    
+    
+    
 }
 
-.icon{
-    margin:5px;
-    padding:5px;
+.iconStyle{
+    width:50px;
 }
