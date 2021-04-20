@@ -1,4 +1,4 @@
-#TEH COMPUTER SERVICE
+#TECH COMPUTER SERVICE
 
 #full-stake-website -client
 # React-web-app
@@ -9,5 +9,7 @@
 3.Admin can add service and delete service
 4.user can provice facncy Review
 5.Admin can Add admin etc many moer
+
+LIVE WEB SITE LINK :  https://tech-computer-repair.netlify.app/
 
 # complete-website-client-shafikul311
