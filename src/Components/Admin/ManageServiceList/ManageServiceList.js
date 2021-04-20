@@ -15,7 +15,7 @@ const handleDelete =(id) =>{
         alert('delete success')
     })
 
-    console.log( id , 'id')
+    // console.log( id , 'id')
 
 }
 

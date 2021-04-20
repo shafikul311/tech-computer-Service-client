@@ -13,7 +13,7 @@ const ManageService = () => {
 
     },[])
 
-    console.log(allBookingData)
+    // console.log(allBookingData)
 
 
     return (
@@ -27,8 +27,7 @@ const ManageService = () => {
                         <tr>
                         <th scope="col">Email</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Service Type</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Delete Service</th>
                         </tr>
                     </thead>
                     {
