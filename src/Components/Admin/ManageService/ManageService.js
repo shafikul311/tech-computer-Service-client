@@ -6,7 +6,7 @@ const ManageService = () => {
     const [allBookingData , setAllbookingData] = useState([])
 
     useEffect(()=>{
-        const url = `http://localhost:5080/getService`
+        const url = `https://fierce-cove-94857.herokuapp.com/getService`
         fetch(url)
         .then(res =>res.json())
         .then(data =>setAllbookingData(data))

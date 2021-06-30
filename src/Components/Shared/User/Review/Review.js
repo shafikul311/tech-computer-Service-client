@@ -23,7 +23,8 @@ const Review = () => {
     // console.log(imageURL)
 
 
-    const url = `http://localhost:5080/addReview`;
+
+    const url = `https://fierce-cove-94857.herokuapp.com/addReview`;
     fetch(url, {
       method: "POST",
       headers: {

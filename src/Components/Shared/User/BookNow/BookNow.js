@@ -21,7 +21,7 @@ const BookNow = () => {
 
 useEffect(() => {
 
-    const url = `http://localhost:5080/addService/${_id}`
+    const url = `https://fierce-cove-94857.herokuapp.com/addService/${_id}`
     fetch(url)
     .then(res => res.json())
     .then(data => setBookingData(data))
@@ -43,7 +43,7 @@ const handlePaymentSuccess = (paymentId)=>{
     }
    console.log(paymentData)
 
-   const url = `http://localhost:5080/addBooking`;
+   const url = `https://fierce-cove-94857.herokuapp.com/addBooking`;
    fetch(url, {
      method: "POST",
      headers: {

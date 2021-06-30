@@ -17,7 +17,7 @@ const AddService = () => {
     };
     console.log(serviceData)
 
-    const url = `http://localhost:5080/addService`;
+    const url = `https://fierce-cove-94857.herokuapp.com/addService`;
     fetch(url, {
       method: "POST",
       headers: {

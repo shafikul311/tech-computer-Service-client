@@ -10,8 +10,8 @@ const MakeAdmin = () => {
         const emailData = { 
             email:data.email
         }
-        console.log(data.email)
-        const url = `http://localhost:5080/addAdmin`;
+        // console.log(data.email)
+        const url = `https://fierce-cove-94857.herokuapp.com/addAdmin`;
         fetch(url, {
           method: "POST",
           headers: {
@@ -19,7 +19,11 @@ const MakeAdmin = () => {
           },
           body: JSON.stringify(emailData),
         }).then((res) => res.json());
+
+      
+
     }
+
     return (
         <div className="row">
             <Sidebar></Sidebar>

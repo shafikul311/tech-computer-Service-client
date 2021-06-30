@@ -9,7 +9,7 @@ const Sidebar = () => {
         const [isAdmin , setIsAdmin] = useState(false)
 
         useEffect(()=>{
-            const url = `http://localhost:5080/isAdmin`
+            const url = `https://fierce-cove-94857.herokuapp.com/isAdmin`
             fetch(url, {
                 method: 'POST',
                 headers: { 'content-type': 'application/json' },

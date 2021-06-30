@@ -33,7 +33,7 @@ const Login = () => {
    
     var user = result.user;
     // console.log(user)
-    const { displayName, email } = result.user;
+    const { displayName, email } = user;
     const signInUser = { name: displayName, email };
 
     setLoggedInUser(signInUser);

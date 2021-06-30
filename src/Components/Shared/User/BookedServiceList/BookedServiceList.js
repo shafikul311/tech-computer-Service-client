@@ -10,7 +10,7 @@ const BookedServiceList = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   
     useEffect(() => {
-      fetch(`http://localhost:5080/addBooking?email=` + loggedInUser.email)
+      fetch(`https://fierce-cove-94857.herokuapp.com/addBooking?email=` + loggedInUser.email)
         .then((res) => res.json())
         .then((data) => setBookings(data));
     }, []);

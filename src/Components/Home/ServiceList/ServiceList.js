@@ -16,7 +16,6 @@ const ServiceList = (props) => {
         ],
         from: { opacity: 0, color: 'red' },
       })
-      // ...
 
 
 
@@ -25,7 +24,7 @@ const ServiceList = (props) => {
 
         
        <div className="col-md-3 text-center box-shadow m-5">
-           <Link className="text-brand" to={`bookNow/${_id}`}>
+           <Link className="text-brand" style={{ textDecoration: 'none'}} to={`bookNow/${_id}`}>
            <div className="p-3">
 
            <animated.div style={styles}>

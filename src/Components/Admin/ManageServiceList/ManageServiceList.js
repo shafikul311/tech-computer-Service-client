@@ -5,7 +5,7 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
 const ManageServiceList = (props) => {
 
 const handleDelete =(id) =>{
-    fetch(`http://localhost:5080/delete/${id}`,{
+    fetch(`https://fierce-cove-94857.herokuapp.com/delete/${id}`,{
         method: 'DELETE'
 
 
